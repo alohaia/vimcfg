@@ -3,6 +3,8 @@
 > 我的 vim 配置。
 > 基于 [amix/vimrc](https://github.com/amix/vimrc)。
 
+![](https://github.com/alohaia/photos/blob/master/showvim.png)
+
 ## 安装
 
 1. 首先，备份并移除你的 `.vimrc` 和 `.vim`。
