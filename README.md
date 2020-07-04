@@ -7,11 +7,12 @@
 1. First, **backup** and remove your `.vimrc` and `.vim`.
 
 2. Then run the commands below.
-```bash
-git clone https://github.com/alohaia/vimcfg.git
-cd vimcfg
-cp -r .vim .vimrc vimrcs ~
-```
+
+   ```bash
+   git clone https://github.com/alohaia/vimcfg.git
+   cd vimcfg
+   cp -r .vim .vimrc vimrcs ~
+   ```
 
 3. Download [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) from baidunetdisk: 
 
