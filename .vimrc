@@ -6,8 +6,6 @@ source ~/vimrcs/filetypes.vim
 source ~/vimrcs/plugins_config.vim
 source ~/vimrcs/extended.vim
 
-au FileType markdown source ~/vimrcs/writer.vim
-
 " Use the internal diff if available.
 " Otherwise use the special 'diffexpr' for Windows.
 if &diffopt !~# 'internal'
