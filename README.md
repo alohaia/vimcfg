@@ -14,7 +14,7 @@
    cp -r .vim .vimrc vimrcs ~
    ```
 
-3. Download [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) from baidunetdisk: 
+3. Download [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) via baidunetdisk: 
 
    Link: https://pan.baidu.com/s/1sBMbYUsdka0XnNPZ_HJrUw  Extraction code: 0fj1
 
@@ -31,3 +31,4 @@
 :PlugInstall
 ```
 
+5. Install YCM.
