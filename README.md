@@ -1,5 +1,6 @@
 # vimcfg
 > my vim configuration.
+> 
 > Based on [amix/vimrc](https://github.com/amix/vimrc).
 
 ![](https://github.com/alohaia/photos/blob/master/showvim.png)
