@@ -347,7 +347,7 @@ inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
-"youcompleteme  默认tab  s-tab 和自动补全冲突
+"youcompleteme  默认tab  s-tab 和自动补全冲突(已将 snip 补全快捷键设置为 <c-c>)
 "let g:ycm_key_list_select_completion=['<c-n>']
 "let g:ycm_key_list_select_completion = ['<Down>']
 "let g:ycm_key_list_previous_completion=['<c-p>']
@@ -399,6 +399,7 @@ nmap <Leader>d :ALEDetail<CR>
 
 " vim-polyglot，开箱即用型的语法高亮包
 Plug 'sheerun/vim-polyglot'
+" 对css禁用此插件
 let g:polyglot_disabled = ['css']
 
 
@@ -511,7 +512,7 @@ Plug 'junegunn/goyo.vim', {'for': 'markdown'}
 
 " 注意TagList不支持中文路径
 " 需要安装 ctags
-Plug 'vim-scripts/taglist.vim', {'on': 'This Plugin is disabled.'} "{'on': ['Tlist', 'TlistOpen', 'TlistToggle']}
+" Plug 'vim-scripts/taglist.vim', {'on': 'This Plugin is disabled.'} "{'on': ['Tlist', 'TlistOpen', 'TlistToggle']}
 "set updatetime=4
 "nnoremap <leader>tl :TlistToggle<cr>
 "let g:Tlist_WinWidth=30
@@ -543,7 +544,6 @@ Plug 'garbas/vim-snipmate', {'on' : 'This plugin is disabled.'}
 "let g:snipMate.scope_aliases = {}
 "let g:snipMate.scope_aliases['cpp'] = 'c,cpp'
 "let g:snipMate.decsription_in_completion = 1
-
 
 Plug 'MarcWeber/vim-addon-mw-utils', {'on' : 'This plugin is disabled.'} " needed by snipmate
 Plug 'tomtom/tlib_vim', {'on' : 'This plugin is disabled.'}              " needed by snipmate
