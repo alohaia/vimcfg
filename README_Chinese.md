@@ -15,6 +15,7 @@
    git clone https://github.com/alohaia/vimcfg.git
    cd vimcfg
    cp -r .vim .vimrc vimrcs ~
+   mkdir -p ~/.vim/.temp_dirs/backupdir ~/.vim/.temp_dirs/undodir
    ```
 
 3. 通过百度网盘下载 [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) :
