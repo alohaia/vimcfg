@@ -358,24 +358,23 @@ let g:ycm_confirm_extra_conf=0
 
 " ale 异步语法检查插件
 Plug 'dense-analysis/ale'
-"显示Linter名称,出错或警告等相关信息
-"始终开启标志列
-let g:ale_sig_column_always = 0
+"错误和警告都处理完后关闭标志列
+let g:ale_sign_column_always = 0
+"高亮显示
 let g:ale_set_highlights = 1
-let g:ale_sign_error = "E"
-let g:ale_sign_warning = "W"
+"自定义error和warning图标
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
 "在vim自带的状态栏中整合ale
 "let g:ale_statusline_format = ['XXH  %d','W  %d','OK']
 "let g:ale_echo_msg_error_str = "E"
 "let g:ale_echo_msg_warning_str = "W"
-"let g:ale_echo_msg_format = '[%linter%] %s [%serverity%]'
+"自定义状态栏
 let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
+"显示Linter名称,出错或警告等相关信息
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-"自定义error和warning图标
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
 "只有保存时才进行语法检测
 "let g:ale_lint_on_text_changed = "never"
 "打开文件时不进行检查
