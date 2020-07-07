@@ -67,7 +67,7 @@ set nolist
 " +----------------------+
 " |       透明背景       |
 " +----------------------+
-" 需要终端的支持，我使用的terminator支持透明背景
+" 需要终端的支持，terminator 和 Tilix 支持透明背景
 if has('linux')
     au VimEnter * hi Normal ctermfg=252 ctermbg=none
 endif
@@ -105,7 +105,7 @@ endif
 " +----------------------+
 " |       快捷键         |
 " +----------------------+
-inoremap ss <esc>
+inoremap kk <esc>
 
 nnoremap J 3j
 nnoremap K 3k
