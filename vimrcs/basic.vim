@@ -50,8 +50,8 @@ set smartindent                     " 为C语言设置自动缩进
 au filetype c,cpp set cindent       " C样式缩进
 " set spell spelllang=en_us
 " set nospell
-set autochdir                       " 自动切换到当前文件所在目录
-" set noautochdir
+" set autochdir                       " 自动切换到当前文件所在目录
+set noautochdir
 set autoread
 set wildmenu
 set modifiable
