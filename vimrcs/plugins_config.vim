@@ -12,9 +12,8 @@ call plug#begin('~/.vim/plugins')
 Plug 'junegunn/vim-plug'
 
 
-" terminal 命令更好用
 " bash插件 在vim中运行command
-" Plug 'lrvick/Conque-Shell'
+" Plug 'lrvick/Conque-Shell'    " terminal 命令更好用
 " usage
 " ConqueTerm bash 运行bash
 " ConqueTermSplit <command> 分割窗口打开command
@@ -74,10 +73,6 @@ let g:NERDToggleCheckAllLines = 1
 " be repeated via .
 
 
-Plug 'tpope/vim-pathogen'
-" 符号编辑插件  
-
-
 " c++ stl高亮
 Plug 'octol/vim-cpp-enhanced-highlight'
 " 默认不高亮类作用域
@@ -118,7 +113,21 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") &&
 
 Plug 'tpope/vim-vinegar'
 let NERDTreeHijackNetrw = 0
-
+Plug 'Xuyuanp/nerdtree-git-plugin'
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+" 不显示 Ignored 状态(a heavy feature may cost much more time)
+let g:NERDTreeShowIgnoredStatus = 1
 
 " Tagbar,代替TagList
 " 要用来编写C++程序，还需要安装(ctags还支持其他语言，详见 :h tagbar.txt)：
@@ -468,9 +477,10 @@ let g:rehash256 = 1     " under development, try to use 256 color version
 
 
 Plug 'jiangmiao/auto-pairs'
+" 开启/禁用 auto-pairs
+let g:AutoPairsShortcutToggle='<M-P>'
 " 将一对 pair 后面的内容移到 pair 中（在 pair 内按下快捷键）
 let g:AutoPairsShortcutFastWrap='<M-e>'
-let g:AutoPairsShortcutToggle='<M-P>'
 let g:AutoPairsShortcutJump='<M-n>'
 au FileType html let b:AutoPairs["<"]=">"
 au FileType vim let b:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '`':'`', '<':'>'} " 不配对双引号
@@ -487,6 +497,14 @@ let g:AutoPairsFlyMode=0
 let g:AutoPairsShortcutBackInsert='<M-b>'
 
 
+" 自动为某些语言添加 end/endif/endfunction ...
+Plug 'https://github.com/tpope/vim-endwise'
+
+
+Plug 'maxbrunsfeld/vim-yankstack'
+nmap <leader>N <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+let g:yankstack_yank_keys = ['y', 'd']
 
 " +--------------+
 " |   markdown   |

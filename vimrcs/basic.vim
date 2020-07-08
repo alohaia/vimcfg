@@ -50,8 +50,8 @@ set smartindent                     " 为C语言设置自动缩进
 au filetype c,cpp set cindent       " C样式缩进
 " set spell spelllang=en_us
 " set nospell
-" set autochdir                       " 自动切换到当前文件所在目录
-set noautochdir
+" set autochdir                     " 自动切换到当前文件所在目录
+set noautochdir                     " 使用 <leader>. 手动切换到当前目录
 set autoread
 set wildmenu
 set modifiable
@@ -105,13 +105,15 @@ endif
 " +----------------------+
 " |       快捷键         |
 " +----------------------+
+" <leader>
+let g:mapleader = ','
+
 inoremap kk <esc>
 
 nnoremap J 3j
 nnoremap K 3k
 
-" <leader>
-let g:mapleader = ','
+nnoremap Y y$
 
 "noremap <F2> <ESC>:tabnew<CR>
 "noremap <F3> <ESC>:tabclose<CR>
