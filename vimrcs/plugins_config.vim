@@ -91,7 +91,7 @@ let g:cpp_concepts_highlight = 1
 " |    IDE    |
 " +-----------+
 
-Plug 'scrooloose/nerdtree' , {'on': ['NERDTreeToggle', 'NERDTree', 'NERDTreeFromBookmark', 'NERDTreeFind']}
+Plug 'preservim/nerdtree' , {'on': ['NERDTreeToggle', 'NERDTree', 'NERDTreeFromBookmark', 'NERDTreeFind']}
 let NERDTreeHijackNetrw = 1
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
@@ -115,17 +115,29 @@ Plug 'tpope/vim-vinegar'
 let NERDTreeHijackNetrw = 0
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
+    \ "Modified"  : "M",
+    \ "Staged"    : "S",
+    \ "Deleted"   : "D",
+    \ "Untracked" : "!",
+    \ "Renamed"   : "»",
+    \ "Unmerged"  : "⎇ ",
+    \ "Dirty"     : "✖",
+    \ "Clean"     : "✔",
+    \ 'Ignored'   : '~',
     \ "Unknown"   : "?"
     \ }
+"let g:NERDTreeIndicatorMapCustom = {
+"    \ "Modified"  : "✹",
+"    \ "Staged"    : "✚",
+"    \ "Untracked" : "✭",
+"    \ "Renamed"   : "➜",
+"    \ "Unmerged"  : "═",
+"    \ "Deleted"   : "✖",
+"    \ "Dirty"     : "✗",
+"    \ "Clean"     : "✔︎",
+"    \ 'Ignored'   : '☒',
+"    \ "Unknown"   : "?"
+"    \ }
 " 不显示 Ignored 状态(a heavy feature may cost much more time)
 let g:NERDTreeShowIgnoredStatus = 1
 
