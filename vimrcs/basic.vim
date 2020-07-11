@@ -32,6 +32,7 @@
 """""""""""""""""""""""""""
 " => 我添加的内容
 """""""""""""""""""""""""""
+set nocompatible
 set number                          " 行首显示数字
 set relativenumber                  " 行首显示相对数字
 set cursorline                      " 突出显示光标所在行
@@ -54,7 +55,6 @@ set noautochdir                     " 使用 <leader>. 手动切换到当前目�
 set autoread
 set wildmenu
 set modifiable
-set nocompatible
 set splitright
 set ch=1            " Make command line two lines high
 set mousehide       " Hide the mouse when typing text
@@ -99,6 +99,7 @@ if !has('win16') && !has('win32')
     nnoremap ： :
     nnoremap ； ;
     nnoremap 、 /
+    nnoremap ． .
 endif
 
 " +----------------------+
