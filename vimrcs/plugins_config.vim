@@ -307,7 +307,7 @@ let g:deoplete#enable_at_startup = 1
 
 
 let g:plug_timeout = 300
-Plug 'ycm-core/YouCompleteMe' ", { 'do': 'python3 ./install.py --clangd-completer'}
+Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 ./install.py --clangd-completer'}
 "let g:ycm_global_ycm_extra_conf='~/.vim/plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "let g:ycm_confirm_extra_conf = 1
 "let g:ycm_semantic_triggers = {
