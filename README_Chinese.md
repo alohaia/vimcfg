@@ -19,17 +19,10 @@
    curl --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
-3. 通过百度网盘下载 [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) :
+3. **如果你能以令人满意的速度下载 github 上的项目和 https://dl.bintray.com/ycm-core/libclang/libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2，请无视这一步。**
    
-   链接: https://pan.baidu.com/s/1sBMbYUsdka0XnNPZ_HJrUw  提取码: 0fj1
+   CSDN上的资源还在审核，之后补上。
 
-   ```bash
-   mkdir ~/.vim/plugins
-   tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
-```
-   
-> 如果你能直接用 git 下载 YCM, 那就跳过这一步。
-   
 4. 在 Vim 里，运行：
 
    ```

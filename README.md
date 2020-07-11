@@ -18,16 +18,9 @@
    curl --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
-3. Download [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) via baidunetdisk: 
+3. If you have no trouble downloading YCM, libclang and etc, just ignore this step.
 
-   Link: https://pan.baidu.com/s/1sBMbYUsdka0XnNPZ_HJrUw  Extraction code: 0fj1
-
-   ```
-   mkdir ~/.vim/plugins
-   tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
-   ```
-
-   > If you have no trouble downloading YCM with git, just skip this step.
+   国内用户（准确地说，是下载遇到问题的用户）请阅读[中文版本](https://github.com/alohaia/vimcfg/blob/master/README_Chinese.md)中的额外步骤。
 
 4. In vim, run:
 
