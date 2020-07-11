@@ -3,7 +3,7 @@
 > 我的 vim 配置。
 > 基于 [amix/vimrc](https://github.com/amix/vimrc)。
 
-![](https://img-blog.csdnimg.cn/20200704141112546.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5ODIxNzg3,size_16,color_FFFFFF,t_70)
+![](https://github.com/alohaia/photos/blob/master/showvim.png)
 
 ## 安装
 
@@ -24,11 +24,12 @@
    链接: https://pan.baidu.com/s/1sBMbYUsdka0XnNPZ_HJrUw  提取码: 0fj1
 
    ```bash
+   mkdir ~/.vim/plugins
    tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
-   ```
-
-   > 如果你能直接用 git 下载 YCM, 那就跳过这一步。
-
+```
+   
+> 如果你能直接用 git 下载 YCM, 那就跳过这一步。
+   
 4. 在 Vim 里，运行：
 
    ```

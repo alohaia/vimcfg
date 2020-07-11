@@ -23,6 +23,7 @@
    Link: https://pan.baidu.com/s/1sBMbYUsdka0XnNPZ_HJrUw  Extraction code: 0fj1
 
    ```
+   mkdir ~/.vim/plugins
    tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
    ```
 
