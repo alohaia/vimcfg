@@ -13,7 +13,7 @@ Plug 'junegunn/vim-plug'
 
 
 " bash插件 在vim中运行command
-" Plug 'lrvick/Conque-Shell'    " terminal 命令更好用
+" Plug 'lrvick/Conque-Shell'    " terminal 命令更好用，快捷键: <leader>ter
 " usage
 " ConqueTerm bash 运行bash
 " ConqueTermSplit <command> 分割窗口打开command
@@ -250,7 +250,7 @@ let g:airline_right_sep = ''
 "let g:airline_right_alt_sep = ''  "separater
 let g:airline_right_alt_sep = ''  "separater
 let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.linenr = '☰ '
 "let g:airline_symbols.linenr = '␊'
 "let g:airline_symbols.linenr = '␤'
 "let g:airline_symbols.linenr = '¶'
@@ -422,6 +422,19 @@ nmap <Leader>d :ALEDetail<CR>
 Plug 'sheerun/vim-polyglot'
 " 对css禁用此插件
 let g:polyglot_disabled = ['css']
+
+
+" +----------+
+" |   git    |
+" +----------+
+" 在vim中使用git命令
+Plug 'tpope/vim-fugitive'
+
+" 在vim中显示文件变动
+Plug 'airblade/vim-gitgutter'
+
+" git commit 浏览器
+Plug 'junegunn/gv.vim'
 
 
 " +----------+
