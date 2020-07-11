@@ -14,8 +14,9 @@
    ```bash
    git clone https://github.com/alohaia/vimcfg.git
    cd vimcfg
-   cp -r .vim .vimrc vimrcs ~
+   cp -r .vimrc vimrcs ~
    mkdir -p ~/.vim/.temp_dirs/backupdir ~/.vim/.temp_dirs/undodir
+   curl --create-dirs -o ~/vimcfg/.vim/autoload/plug.vim https://github.com/junegunn/vim-plug/blob/master/plug.vim
    ```
 
 3. 通过百度网盘下载 [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) :
@@ -32,6 +33,14 @@
 
    ```
    :PlugUpdate
+   ```
+
+   在终端中，运行：
+
+   ```bash
+   mkdir ~/.vim/autoload ~/.vim/colors
+   ln -s ~/.vim/plugins/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
+   ln -s ~/.vim/plugins/vim-plug/plug.vim ~/.vim/autoload/plug.vim
    ```
 
 5. 安装 YCM.
