@@ -38,14 +38,13 @@ set cursorline                      " 突出显示光标所在行
 set textwidth=500                   " 设置行宽
 set nowrap                          " 不自动折行
 " set cpo-=n
-set showbreak==>
+set showbreak=➜\                    " 或者 let &showbreak = '➜ '
 " set wrapmargin=0
 " set linebreak
 " set sidescrolloff=0
 " set laststatus=2                  " 0/1/2
 set showmatch
 set matchtime=5
-set incsearch
 set smartindent                     " 为C语言设置自动缩进
 au filetype c,cpp set cindent       " C样式缩进
 " set spell spelllang=en_us
@@ -263,7 +262,7 @@ set cmdheight=1
 set hid
 
 " Ignore case when searching
-" set ignorecase
+set ignorecase
 
 " When searching try to be smart about cases 
 set smartcase
@@ -283,6 +282,7 @@ set magic
 " Show matching brackets when text indicator is over them
 set showmatch 
 " How many tenths of a second to blink when matching brackets
+" 高亮显示配对括号时，当前括号会每 2/10 秒闪烁一次
 set mat=2
 
 " No annoying sound on errors
