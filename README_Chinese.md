@@ -23,6 +23,11 @@
    
    CSDN上的资源还在审核，之后补上。
 
+   ```bash
+   mkdir ~/.vim/plugins
+   tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
+   ```
+   
 4. 在 Vim 里，运行：
 
    ```
@@ -38,4 +43,4 @@
    ln -s ~/.vim/plugins/vim-plug/plug.vim ~/.vim/autoload/plug.vim
    ```
 
-5. 安装 YCM.
+5. 安装 YCM。
