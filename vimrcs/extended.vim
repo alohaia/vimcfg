@@ -42,7 +42,8 @@ set guioptions-=m
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vimrc<cr>
+" nnoremap <leader>e :e! ~/.vimrc<cr>
+nnoremap <leader>e :cd ~/vimrcs/<cr>:e 
 autocmd! bufwritepost $VIMRUNTIME/_vimrc source $VIMRUNTIME/_vimrc
 
 
