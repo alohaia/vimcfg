@@ -29,9 +29,8 @@
 
 4. In vim, run:
 
-```
-:PlugUpdate
-:PlugInstall
-```
+    ```
+    :PlugUpdate
+    ```
 
 5. Install YCM.

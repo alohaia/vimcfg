@@ -32,7 +32,6 @@
 
    ```
    :PlugUpdate
-   :PlugInstall
    ```
 
 5. 安装 YCM.
