@@ -15,7 +15,7 @@
    cd vimcfg
    cp -r .vim .vimrc vimrcs ~
    mkdir -p ~/.vim/.temp_dirs/backupdir ~/.vim/.temp_dirs/undodir
-   curl --create-dirs -o ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
+   curl --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
 3. Download [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) via baidunetdisk: 
