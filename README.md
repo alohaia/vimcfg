@@ -39,6 +39,7 @@
 
     ```bash
     mkdir ~/.vim/autoload ~/.vim/colors
+    rm ~/.vim/autoload/plug.vim
     ln -s ~/.vim/plugins/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
     ln -s ~/.vim/plugins/vim-plug/plug.vim ~/.vim/autoload/plug.vim
     ```
