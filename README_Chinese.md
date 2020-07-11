@@ -16,7 +16,7 @@
    cd vimcfg
    cp -r .vimrc vimrcs ~
    mkdir -p ~/.vim/.temp_dirs/backupdir ~/.vim/.temp_dirs/undodir
-   curl --create-dirs -o ~/vimcfg/.vim/autoload/plug.vim https://github.com/junegunn/vim-plug/blob/master/plug.vim
+   curl --create-dirs -o ~/.vim/autoload/plug.vim https://github.com/junegunn/vim-plug/blob/master/plug.vim
    ```
 
 3. 通过百度网盘下载 [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) :
