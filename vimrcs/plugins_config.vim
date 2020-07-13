@@ -309,35 +309,14 @@ let g:deoplete#enable_at_startup = 1
 let g:plug_timeout = 300
 Plug 'ycm-core/YouCompleteMe', { 'do': 'python3 ./install.py --clangd-completer'}
 "let g:ycm_global_ycm_extra_conf='~/.vim/plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-"let g:ycm_confirm_extra_conf = 1
-"let g:ycm_semantic_triggers = {
-"    \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-"    \ 'cs,lua,javascript': ['re!\w{2}'],
-"    \ }
-"" 不在单独打开窗口显示函数原型
-"set completeopt=menu,menuone
-"let g:ycm_add_preview_to_completeopt = 0
-"let g:ycm_show_diagnostics_ui = 0
-"let g:ycm_filetype_whitelist = {
-"      \ "c":1,
-"      \ "cpp":1, 
-"      \ "objc":1,
-"      \ "sh":1,
-"      \ "zsh":1,
-"      \ "zimbu":1,
-"      \ }
-"寻找全局配置文件
-let g:ycm_global_ycm_extra_conf='~/.vim/plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 " 禁用syntastic来对python检查
 let g:syntastic_ignore_files=[".*\.py$"] 
 " 使用ctags生成的tags文件
 let g:ycm_collect_identifiers_from_tag_files = 1
 " 开启语义补全
-" 修改对C语言的补全快捷键，默认是CTRL+space，修改为ALT+;未测出效果
-"let g:ycm_key_invoke_completion = '<M-;>'
-" 设置转到定义处的快捷键为ALT+G，未测出效果
-"nmap <M-g> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR> 
+" 在定义和声明之间跳转 "DefinitionElseDeclaration
+nnoremap <leader>] :YcmCompleter GoTo <C-R>=expand("<cword>")<CR><CR>
 "关键字补全
 let g:ycm_seed_identifiers_with_syntax = 1
 " 在接受补全后不分裂出一个窗口显示接受的项
@@ -374,7 +353,10 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 "let g:ycm_key_list_previous_completion=['<c-p>']
 "let g:ycm_key_list_previous_completion = ['<Up>']
 "关闭加载.ycm_extra_conf.py提示
-let g:ycm_confirm_extra_conf=0
+"let g:ycm_confirm_extra_conf=0
+
+" 生成.yacm_extra_conf.py
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 
 " ale 异步语法检查插件
@@ -409,6 +391,28 @@ let g:ale_linters = {
 \   'c':['clang'],
 \   'c++':['clang'],
 \}
+" ALEFix
+" 使用 :ALEFixSuggest 命令可以查看更多 fixers
+let g:ale_fixers = {
+"\   'javascript': [
+"\       'DoSomething',     " Function DoSomething need to be defined.
+"\       'eslint',
+"\       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+"\   ],
+\   'cpp': [
+\       'remove_trailing_lines',
+\       'trim_whitespace',
+\       'clangtidy',
+\   ],
+\   'python': [
+\       'remove_trailing_lines',
+\       'trim_whitespace',
+\       'add_blank_lines_for_python_control_statements',
+\       'autopep8',
+\   ],
+\}
+" Bind F8 to fixing problems with ALE
+nmap <F8> <Plug>(ale_fix)
 "前、后一个错误或警告
 nmap sp <Plug>(ale_previous_wrap)
 nmap np <Plug>(ale_next_wrap)
@@ -488,10 +492,11 @@ let g:rainbow_conf = {
 
 
 Plug 'ctrlpvim/ctrlp.vim', {'on': ['CtrlP', 'CtrlPBuffer']}
-let g:ctrlp_working_path_mode = 0
+" 将 CtrlP 的工作目录设置为仓库根目录（找不到则设置为当前目录）
+let g:ctrlp_working_path_mode = 'ra'
 "let g:ctrlp_map = 
-map <leader>j :CtrlP<cr>
-map <leader>b :CtrlPBuffer<cr>
+nnoremap <leader>j :CtrlP<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 let g:ctrlp_max_height = 10
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee\|^\.vscode'
 

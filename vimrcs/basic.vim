@@ -62,6 +62,7 @@ filetype plugin indent on
 " 显示特殊字符
 set listchars=eol:↵,tab:<->,trail:•,extends:>,precedes:<    " trail 与　space 冲突
 set nolist
+set showcmd
 
 " +----------------------+
 " |       透明背景       |
@@ -106,9 +107,9 @@ endif
 " |       快捷键         |
 " +----------------------+
 " <leader>
-let g:mapleader = ','
+let g:mapleader = "\<space>"
 
-inoremap kk <esc>
+inoremap ii <esc>
 
 nnoremap J 3j
 nnoremap K 3k

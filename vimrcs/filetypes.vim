@@ -1,34 +1,34 @@
 """"""""""""""""""""""""""""""
 " => 创建文件头
 """"""""""""""""""""""""""""""
-autocmd BufNewFile *.py,*.tex exec ":call SetTitle()"
-func! SetTitle()
-    if &filetype == 'python'    " python
-        call setline(1,"#!/usr/bin/env python3")
-        call append(line("."),"# -*- coding:UTF-8 -*-")
-        call append(line(".")+1,"##########################################################################")
-        call append(line(".")+2, "# File Name: ".expand("%"))
-        call append(line(".")+3, "# Author: aloha")
-        call append(line(".")+4, "# Created Time: ".strftime("%c"))
-        call append(line(".")+5, "##########################################################################")
-    endif
-    if &filetype == 'plaintex'  " LaTex
-        call setline(1,"% -*- coding:UTF-8 -*-")
-        call append(line("."),"%#########################################################################")
-        call append(line(".")+1, "% File Name: ".expand("%"))
-        call append(line(".")+2, "% Author: aloha")
-        call append(line(".")+3, "% Created Time: ".strftime("%c"))
-        call append(line(".")+4, "%#########################################################################")
-    endif
-    if &filetype == 'cpp' || &filetype == 'c'
-        call setline(1,"% -*- coding:UTF-8 -*-")
-        call append(line("."),"%#########################################################################")
-        call append(line(".")+1, "% File Name: ".expand("%"))
-        call append(line(".")+2, "% Author: aloha")
-        call append(line(".")+3, "% Created Time: ".strftime("%c"))
-        call append(line(".")+4, "%#########################################################################")
-    normal Go
-endfunc
+" autocmd BufNewFile *.py,*.tex exec ":call SetTitle()"
+" func! SetTitle()
+"     if &filetype == 'python'    " python
+"         call setline(1,"#!/usr/bin/env python3")
+"         call append(line("."),"# -*- coding:UTF-8 -*-")
+"         call append(line(".")+1,"##########################################################################")
+"         call append(line(".")+2, "# File Name: ".expand("%"))
+"         call append(line(".")+3, "# Author: aloha")
+"         call append(line(".")+4, "# Created Time: ".strftime("%c"))
+"         call append(line(".")+5, "##########################################################################")
+"     endif
+"     if &filetype == 'plaintex'  " LaTex
+"         call setline(1,"% -*- coding:UTF-8 -*-")
+"         call append(line("."),"%#########################################################################")
+"         call append(line(".")+1, "% File Name: ".expand("%"))
+"         call append(line(".")+2, "% Author: aloha")
+"         call append(line(".")+3, "% Created Time: ".strftime("%c"))
+"         call append(line(".")+4, "%#########################################################################")
+"     endif
+"     if &filetype == 'cpp' || &filetype == 'c'
+"         call setline(1,"% -*- coding:UTF-8 -*-")
+"         call append(line("."),"%#########################################################################")
+"         call append(line(".")+1, "% File Name: ".expand("%"))
+"         call append(line(".")+2, "% Author: aloha")
+"         call append(line(".")+3, "% Created Time: ".strftime("%c"))
+"         call append(line(".")+4, "%#########################################################################")
+"     normal Go
+" endfunc
 
 """"""""""""""""""""""""""""""
 " => C/C++ section
