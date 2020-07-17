@@ -21,16 +21,16 @@
 
 3. **如果你能以令人满意的速度下载 github 上的项目和 https://dl.bintray.com/ycm-core/libclang/libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2，请无视这一步。**
    
-   下载 YCM：https://download.csdn.net/download/qq_39821787/12505516，并解压：
+   下载 [YCM](https://download.csdn.net/download/qq_39821787/12505516)，并解压：
 
    ```bash
    mkdir ~/.vim/plugins
    tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
    ```
    
-   > ale、ultisnips和vimpolyglot：https://download.csdn.net/download/qq_39821787/12603272，有需要也可以下载。
+   > ale、ultisnips和vimpolyglot：[https://download.csdn.net/download/qq_39821787/12603272](https://download.csdn.net/download/qq_39821787/12603272)，有需要也可以下载。
    
-   下载 libclang：https://download.csdn.net/download/qq_39821787/12603251，并移动到 clang_archives 下：
+   下载 [libclang](https://download.csdn.net/download/qq_39821787/12603251)，并移动到 clang_archives 下：
    
    ```
    cp libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2 ~/.vim/plugins/YouCompleteMe/third_party/ycmd/clang_archives
@@ -45,7 +45,7 @@
    在终端中，运行：
 
    ```bash
-   mkdir ~/.vim/autoload ~/.vim/colors
+   mkdir ~/.vim/colors
    rm ~/.vim/autoload/plug.vim
    ln -s ~/.vim/plugins/molokai/colors/molokai.vim ~/.vim/colors/molokai.vim
    ln -s ~/.vim/plugins/vim-plug/plug.vim ~/.vim/autoload/plug.vim
