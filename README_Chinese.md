@@ -19,23 +19,14 @@
    curl --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
-3. **如果你能以令人满意的速度下载 github 上的项目和 https://dl.bintray.com/ycm-core/libclang/libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2，请无视这一步。**
+3. **如果你能以令人满意的速度下载 github 上的项目 (如 YouCompleteMe及其所有子项目) 和 https://dl.bintray.com/ycm-core/libclang/libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2，请无视这一步。**
    
-   下载 [YCM](https://download.csdn.net/download/qq_39821787/12505516)，并解压：
+   下载插件（有一些插件其实下载挺快的，但我还是把所有插件都弄来了）：
 
-   ```bash
-   mkdir ~/.vim/plugins
-   tar -zxvf YouCompleteMe.tar.gz -C ~/.vim/plugins
-   ```
+   - 百度网盘：链接: https://pan.baidu.com/s/1h1mlLNe-H5Q0s8pFSnlrWQ  提取密码: o6r3
+   - CSDN：https://me.csdn.net/download/qq_39821787
    
-   > ale、ultisnips和vimpolyglot：[https://download.csdn.net/download/qq_39821787/12603272](https://download.csdn.net/download/qq_39821787/12603272)，有需要也可以下载。
-   
-   下载 [libclang](https://download.csdn.net/download/qq_39821787/12603251)，并移动到 clang_archives 下：
-   
-   ```bash
-   mkdir ~/.vim/plugins/YouCompleteMe/third_party/ycmd/clang_archives
-   cp libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2 ~/.vim/plugins/YouCompleteMe/third_party/ycmd/clang_archives
-   ```
+   在 .vim 目录下创建 plugins 目录，把压缩包里的插件全部解压到 plugins 下。
    
 4. 在 Vim 里，运行：
 
