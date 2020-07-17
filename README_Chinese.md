@@ -32,7 +32,8 @@
    
    下载 [libclang](https://download.csdn.net/download/qq_39821787/12603251)，并移动到 clang_archives 下：
    
-   ```
+   ```bash
+   mkdir ~/.vim/plugins/YouCompleteMe/third_party/ycmd/clang_archives
    cp libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2 ~/.vim/plugins/YouCompleteMe/third_party/ycmd/clang_archives
    ```
    
