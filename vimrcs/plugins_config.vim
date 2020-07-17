@@ -573,7 +573,7 @@ Plug 'junegunn/goyo.vim', {'for': 'markdown'}
 "let g:Tlist_Exit_OnlyWindow=1
 
 
-Plug 'fholgado/minibufexpl.vim', {'on': 'This Plugin is disabled.'}
+"Plug 'fholgado/minibufexpl.vim'
 "let g:miniBufExplMapWindowNavVim = 1
 "let g:miniBufExplMapWindowNavArrows = 1
 "hi MBENormal               guifg=#808080 guibg=fg
@@ -584,7 +584,7 @@ Plug 'fholgado/minibufexpl.vim', {'on': 'This Plugin is disabled.'}
 "hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
 
-Plug 'garbas/vim-snipmate', {'on' : 'This plugin is disabled.'}
+"Plug 'garbas/vim-snipmate'
 "ino <C-j> <C-r>=snipMate#TriggerSnippet()<cr>
 "snor <C-j> <esc>i<right><C-r>=snipMate#TriggerSnippet()<cr>
 "let g:snipMate = {}
@@ -593,11 +593,11 @@ Plug 'garbas/vim-snipmate', {'on' : 'This plugin is disabled.'}
 "let g:snipMate.scope_aliases['cpp'] = 'c,cpp'
 "let g:snipMate.decsription_in_completion = 1
 
-Plug 'MarcWeber/vim-addon-mw-utils', {'on' : 'This plugin is disabled.'} " needed by snipmate
-Plug 'tomtom/tlib_vim', {'on' : 'This plugin is disabled.'}              " needed by snipmate
+"Plug 'MarcWeber/vim-addon-mw-utils'
+"Plug 'tomtom/tlib_vim', {'on' : 'This plugin is disabled.'}              " needed by snipmate
 
 
-Plug 'itchyny/lightline.vim', {'on' : 'This plugin is disabled.'}
+"Plug 'itchyny/lightline.vim'
 "let g:lightline = {
 "      \ 'colorscheme': 'powerline',
 "      \ 'active': {
@@ -620,7 +620,7 @@ Plug 'itchyny/lightline.vim', {'on' : 'This plugin is disabled.'}
 "      \ }
 
 
-Plug 'terryma/vim-multiple-cursors', {'on' : 'This plugin is disabled.'}
+"Plug 'terryma/vim-multiple-cursors'
 "let g:multi_cursor_use_default_mapping=0
 "" Default mapping
 "let g:multi_cursor_start_word_key      = '<C-n>'
