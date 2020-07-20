@@ -61,7 +61,7 @@ set mousehide       " Hide the mouse when typing text
 filetype plugin indent on
 " 显示特殊字符
 set listchars=eol:↵,tab:<->,trail:•,extends:>,precedes:<    " trail 与　space 冲突
-set nolist
+set list
 set showcmd
 
 " +----------------------+
@@ -126,7 +126,7 @@ endfunction
 
 " 快速切换到当前编辑的文件所在的目录
 " nnoremap <silent> <leader>. :cd %:p:h<CR>
-nnoremap <leader>. :cd %:p:h<CR>
+noremap <leader>. :cd %:p:h<cr>:pwd<cr>
 
 nnoremap <C-Tab> :bn<cr>
 nnoremap <C-S-Tab> :bp<cr>
@@ -194,7 +194,7 @@ au VimEnter * call FullScreen()
 function BigWindow()
     call FullScreen()
     NERDTree
-    TlistOpen
+    TagbarOpen
 endfunction
 
 function SmallWindow()
@@ -202,7 +202,7 @@ function SmallWindow()
     if exists("g:NERDTree")   " vim-plug 中设置不会自动启动，未启动时 Vim 会报错
         NERDTreeClose
     endif
-    TlistClose
+    TagbarClose
 endfunction
 
 " 2. Bwin/Swin转换屏幕显示内容（也会改变Gvim窗口大小）
@@ -414,7 +414,7 @@ au TabLeave * let g:lasttab = tabpagenr()
 map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+"map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try

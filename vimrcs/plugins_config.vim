@@ -12,13 +12,37 @@ call plug#begin('~/.vim/plugins')
 Plug 'junegunn/vim-plug'
 
 
-" bash插件 在vim中运行command
-" Plug 'lrvick/Conque-Shell'    " terminal 命令更好用，快捷键: <leader>ter
-" usage
-" ConqueTerm bash 运行bash
-" ConqueTermSplit <command> 分割窗口打开command
-" ConqueTermVSplit <command> 分割窗口打开command
-" ConqueTermTab <command> 分割窗口打开command
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ack searching and cope displaying
+"    requires ack.vim - it's much better than vimgrep/grep
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run your favorite search tool from Vim, with an enhanced results list.
+Plug 'https://github.com/mileszs/ack.vim'
+" Use the the_silver_searcher if possible (much faster than Ack)
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep --smart-case'
+endif
+" When you press gv you Ack after the selected text
+vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
+" Open Ack and put the cursor in the right position
+map <leader>g :Ack 
+" When you press <leader>r you can search and replace the selected text
+vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
+" Do :help cope if you are unsure what cope is. It's super useful!
+"
+" When you search with Ack, display your results in cope by doing:
+"   <leader>cc
+"
+" To go to the next search result do:
+"   <leader>n
+"
+" To go to the previous search results do:
+"   <leader>p
+"
+map <leader>bc :botright cope<cr>
+map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+map <leader>n :cn<cr>
+map <leader>p :cp<cr>
 
 
 Plug 'preservim/nerdcommenter'
@@ -38,39 +62,6 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
-" [count]<Leader>cc NERDCommenterComment
-"   Comment out the current line or text selected in visual mode.
-" [count]<Leader>cn NERDCommenterNested
-"   Same as <Leader>cc but forces nesting.
-" [count]<Leader>c<space> NERDCommenterToggle
-"   Toggles the comment state of the selected line(s). If the topmost selected
-"   line is commented, all selected lines are uncommented and vice versa.
-" [count]<Leader>cm NERDCommenterMinimal
-"   Comments the given lines using only one set of multipart delimiters.
-" [count]<Leader>ci NERDCommenterInvert
-"   Toggles the comment state of the selected line(s) individually.
-" [count]<Leader>cs NERDCommenterSexy
-"   Comments out the selected lines ``sexily''
-" [count]<Leader>cy NERDCommenterYank
-"   Same as <Leader>cc except that the commented line(s) are yanked first.
-" <Leader>c$ NERDCommenterToEOL
-"   Comments the current line from the cursor to the end of line.
-" <Leader>cA NERDCommenterAppend
-"   Adds comment delimiters to the end of line and goes into insert mode between them.
-" NERDCommenterInsert
-"   Adds comment delimiters at the current cursor position and inserts between.
-"   Disabled by default.
-" <Leader>ca NERDCommenterAltDelims
-"   Switches to the alternative set of delimiters.
-" [count]<Leader>cl    NERDCommenterAlignLeft
-" [count]<Leader>cb    NERDCommenterAlignBoth
-"   Same as NERDCommenterComment except that the delimiters are aligned down the
-"   left side (<Leader>cl) or both sides (<Leader>cb).
-" [count]<Leader>cu NERDCommenterUncomment
-"   Uncomments the selected line(s).
-"
-" With the optional repeat.vim plugin (vimscript #2136), the mappings can also
-" be repeated via .
 
 
 " c++ stl高亮
@@ -280,7 +271,6 @@ let g:UltiSnipsSnippetDirectories=['plugins/vim-snippets/UltiSnips']
 " 允许使用SnipMate代码段
 let g:UltiSnipsEnableSnipMate=1
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-" 见文件末尾的“解决ycm和ultisnips的tab问题”
 let g:UltiSnipsExpandTrigger="<c-c>"
 " 在代码段内跳转
 let g:UltiSnipsJumpForwardTrigger="jj"
@@ -431,7 +421,7 @@ let g:polyglot_disabled = ['css']
 " +----------+
 " |   git    |
 " +----------+
-" 在vim中使用git命令
+" 在vim中使用git命令 :h fugitive.txt 以查看用法
 Plug 'tpope/vim-fugitive'
 
 " 在vim中显示文件变动

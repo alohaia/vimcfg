@@ -9,10 +9,9 @@
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set font according to system
-" 只在Gvim中有效
 if has("mac") || has("macunix")
     set gfn=IBM\ Plex\ Mono:h14,Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
-elseif has("win16") || has("win32")
+elseif has("win16") || has("win32") && has("gui_running")
     "set gfn=IBM\ Plex\ Mono:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
     " +----------------------+
     " |         字体         |
@@ -43,9 +42,12 @@ set guioptions-=m
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nnoremap <leader>e :e! ~/.vimrc<cr>
-nnoremap <leader>e :cd ~/vimrcs/<cr>:e 
-autocmd! bufwritepost $VIMRUNTIME/_vimrc source $VIMRUNTIME/_vimrc
-
+nnoremap <leader>e :cd ~/vimrcs/<cr>:e<space>
+"if has("win16") || has("win32") && has('gui_running')
+"    autocmd! bufwritepost $VIMRUNTIME/.vimrc source $VIMRUNTIME/.vimrc
+"elseif has("linux")
+"    autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+"endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
@@ -63,7 +65,6 @@ else
 endif
 " 不生成中间文件
 set noswapfile
-"set directory=~/.vim/temp_dirs
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -80,9 +81,9 @@ cno $c e <C-\>eCurrentFileDir("e")<cr>
 cno $q <C-\>eDeleteTillSlash()<cr>
 
 " Bash like keys for the command line
-cnoremap <C-A>		<Home>
-cnoremap <C-E>		<End>
-cnoremap <C-K>		<C-U>
+cnoremap <C-A>      <Home>
+cnoremap <C-E>      <End>
+cnoremap <C-K>      <C-U>
 
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
