@@ -19,6 +19,8 @@
    curl --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
    ```
 
+   > 网络太慢，我直接用了本机的文件。
+
 3. **如果你能以令人满意的速度下载 github 上的项目 (如 YouCompleteMe及其所有子项目) 和 https://dl.bintray.com/ycm-core/libclang/libclang-10.0.0-x86_64-unknown-linux-gnu.tar.bz2，请无视这一步。**
    
    下载插件（有一些插件其实下载挺快的，但我还是把所有插件都弄来了）：
