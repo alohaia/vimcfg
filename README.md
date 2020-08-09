@@ -4,6 +4,10 @@
 
 ![](https://github.com/alohaia/photos/blob/master/showvim.png)
 
+**You can still use this repositories, but it's NO LONGER MAINTAINED.**
+
+Maybe you will be interested in my configuration for NeoVim: https://github.com/alohaia/nvimcfg.
+
 ## Installation
 
 1. First, **backup** and remove your `.vimrc` and `.vim`.
@@ -37,4 +41,8 @@
     ln -s ~/.vim/plugins/vim-plug/plug.vim ~/.vim/autoload/plug.vim
     ```
 
-5. Install YCM.
+1. Install YCM.
+
+## Licence
+
+MIT

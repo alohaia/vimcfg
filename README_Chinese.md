@@ -5,6 +5,10 @@
 
 ![](https://github.com/alohaia/photos/blob/master/showvim.png)
 
+**你仍然可以使用这个仓库，但是我已经不再维护它.**
+
+你也许会对[我的 NeoVim 配置](https://github.com/alohaia/nvimcfg)感兴趣。
+
 ## 安装
 
 1. 首先，备份并移除你的 `.vimrc` 和 `.vim`。
