@@ -4,7 +4,7 @@
 
 ![](https://github.com/alohaia/photos/blob/master/showvim.png)
 
-**You can still use this repositories, but it's NO LONGER MAINTAINED.**
+**You can still use this repository, but it's NO LONGER MAINTAINED.**
 
 Maybe you will be interested in my configuration for NeoVim: https://github.com/alohaia/nvimcfg.
 
